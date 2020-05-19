@@ -1,10 +1,12 @@
 import processing.core.PApplet;
 
+
 public class Game {
-    int rectX, rectY;      // Position of square button
-    int rectSizeX;
-    int rectSizeY;
-    PApplet processing;
+    private int rectX;
+    private int rectY;
+    private int rectSizeX;
+    private int rectSizeY;
+    private PApplet processing;
 
     public Game (PApplet prc) {
         this.processing = prc;
@@ -15,7 +17,7 @@ public class Game {
     }
 
     public void show(){
-        this.processing.fill(169,169,169);
+        this.processing.fill(0,255,255);
         this.processing.rect(rectX, rectY, rectSizeX, rectSizeY);
     }
 }

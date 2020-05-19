@@ -1,31 +1,37 @@
 import processing.core.PApplet;
 import processing.core.PFont;
+import processing.core.PImage;
 
 public class Sketch extends PApplet {
-    PFont f;
+    private PFont f;
     private Button b;
     private Game g;
     private int pagina = 0;
+    private PImage img;
+    private PImage bg;
 
     public static void main(String[] args) {
         PApplet.main("Sketch");
     }
 
     public void settings() {
-        size(1300, 700);  //dimensione finestra
+        fullScreen();
     }
 
     public void setup() {
         f = createFont("stocky.ttf", 24);
         textFont(f);
-        background(189,183,107);
         b = new Button(this);
         g = new Game(this);
+        bg = loadImage("bg.jpg");
+        img = loadImage("player.png");
     }
 
     public void draw() {
         if(pagina == 0){
             println("Pagina 0");
+            background(bg);
+            image(img, 50, 50);
             if(b.show()){
                 println("Click");
                 pagina = 1;
