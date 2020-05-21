@@ -14,15 +14,10 @@ public class Button {
         rectY = (this.processing.height)-(rectSizeY*2);
     }
 
-    public boolean show(){
-        this.processing.fill(255);
-        this.processing.ellipse(processing.width/2, processing.height/2+(processing.height/3), rectSizeX, rectSizeY);
-        this.processing.fill(255,0,0);
+    public void show(){
+        this.processing.fill(255,255,255);
+        this.processing.stroke(255,255,255);
         this.processing.textAlign(CENTER);
-        this.processing.text("CLICCA QUI PER INIZIARE", processing.width/2-(rectSizeX/4), processing.height/2+(processing.height/(float)2.9));
-        if(this.processing.mouseX>rectX && this.processing.mouseX <rectX+rectSizeX
-                && this.processing.mouseY>rectY && this.processing.mouseY <rectY+rectSizeY
-                && this.processing.mousePressed) return true;
-        return false;
+        this.processing.text("CLICCA QUALSIASI TASTO PER INIZIARE", (float) (processing.width/2-(rectSizeX/2.5)), processing.height/2+(processing.height/(float)2.9));
     }
 }
