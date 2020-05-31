@@ -30,15 +30,15 @@ public class Sketch extends PApplet {
         moneteVector = new Vector<Monete>();
         for (int i = 0; i < N_MONETE; i++) moneteVector.add(new Monete(this));
         bg = loadImage("bg.jpg");
-        imgPlayer = loadImage("player_2.jpg");
+        imgPlayer = loadImage("personaggio.png");
     }
 
     public void draw() {
         if(pagina == 0){
             println("Pagina 0");
             background(bg);
-            image(imgPlayer, 50, 50);
-            for (Monete m: moneteVector) m.show();
+            //image(imgPlayer, 50, 50);
+            //for (Monete m: moneteVector) m.show();
             b.show();
         }
         if(pagina == 1){
